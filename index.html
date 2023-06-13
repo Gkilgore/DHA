@@ -471,28 +471,50 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
+     
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="organization" id="organization"
+              placeholder="Organization / Company Name" required>
+          </div>
+          <div class="form-group mt-3 form-control">
+            <label class="contact-form-service-label">Reason for reaching out today:</label>
+          
+            <div class="row">
+              <div class="col-md-4">
+                <input type="radio" name="project_type" value="Scoreboard" required> Scoreboard<br>
+                <input type="radio" name="project_type" value="Videoboard"> Videoboard<br>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <div class="col-md-4">
+                <input type="radio" name="project_type" value="Msg Center"> Msg Center<br>
+                <input type="radio" name="project_type" value="Repair/Service"> Repair/Service<br>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+              <div class="col-md-4">
+                <input type="radio" name="project_type" value="New Structure"> New Structure<br>
+                <input type="radio" name="project_type" value="Other Installation"> Other Installation<br>
+                <input type="radio" name="project_type" value="General Consultation"> General Consultation<br>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+       
           </div><!-- End Contact Form -->
 
         </div>
