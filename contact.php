@@ -36,7 +36,7 @@ $contact->add_message($_POST['message'], 'Message', 10);
 
 $contact->cc = array('kiglore3@gmail.com', 'kilgore@dhacontracting.com');
 
-echo $contact->send();
+echo $contact->send() ;
 $contact->cc = 'Kilgore@dhacontracting.com';
 
 ?>
