@@ -3,9 +3,9 @@
 $receiving_email_address = 'Dylan@dhacontracting.com';
 
 if (file_exists($php_email_form = 'php-email-form.php')) {
-  include($php_email_form);
+    include($php_email_form);
 } else {
-  die('Unable to load the "PHP Email Form" Library!');
+    die('Unable to load the "PHP Email Form" Library!');
 }
 
 $contact = new PHP_Email_Form;
@@ -39,13 +39,14 @@ $email_sent = $contact->send();
 
 // Check if the email was sent successfully
 if ($email_sent) {
-  // Fire the Google Ads tracking tag after a successful email sending operation
-  echo '<script>';
-  echo 'gtag("event", "conversion", {"send_to": "AW-11479996666/el-5CNndjowZEPqxi-Iq"});';
-  echo '</script>';
+    // Fire the Google Ads tracking tag after a successful email sending operation
+    echo '<script>';
+    echo 'gtag("event", "conversion", {"send_to": "AW-11479996666/el-5CNndjowZEPqxi-Iq"});';
+    echo '</script>';
 
-  // Optionally, you can include additional JavaScript code or perform other actions here
+    // Optionally, you can include additional JavaScript code or perform other actions here
 }
 
 // Return the result of the email sending operation
 echo $email_sent;
+?>
