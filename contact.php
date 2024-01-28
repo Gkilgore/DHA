@@ -39,12 +39,16 @@ $email_sent = $contact->send();
 
 // Check if the email was sent successfully
 if ($email_sent) {
-    // Fire the Google Ads tracking tag after a successful email sending operation
-    echo '<script>';
-    echo 'gtag("event", "conversion", {"send_to": "AW-11479996666/el-5CNndjowZEPqxi-Iq"});';
-    echo '</script>';
+  // Fire the Google Ads tracking tag after a successful email sending operation
+  echo '<script>';
+  echo 'gtag("event", "conversion", {"send_to": "AW-11479996666/el-5CNndjowZEPqxi-Iq"});';
+  echo '</script>';
 
-    // Optionally, you can include additional JavaScript code or perform other actions here
+  // Optionally, you can include additional JavaScript code or perform other actions here
+  echo 'Email sent successfully!';
+} else {
+  // Handle the case where the email sending operation failed
+  echo 'Error sending email. Please try again later.';
 }
 
 // Return the result of the email sending operation
