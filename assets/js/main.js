@@ -298,4 +298,15 @@ document.addEventListener('DOMContentLoaded', () => {
     var myModal = new bootstrap.Modal(document.getElementById('modal1'));
     myModal.show();
   }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectionParam = urlParams.get("selection");
+  if(selectionParam) {
+    const radioButtons = document.querySelectorAll('input[name="project_type"]');
+        radioButtons.forEach(radio => {
+            if (radio.value === selectionParam) {
+                radio.checked = true;
+            }
+        });
+  }
 });
