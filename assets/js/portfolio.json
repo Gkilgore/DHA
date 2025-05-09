@@ -1,5 +1,6 @@
 [
     {
+        "IMPORTANT NOTICE": "ONLY ADD JOBS 12 AT A TIME- TO BE CLEAR EACH FILTER NEEDS TO BE DIVISIBLE BY 12 OR EVERYTHING WILL BREAK ON THAT PAGE, NOT JUST THE TOTAL AMOUNT",
         "filter": "filter-score",
         "img": "assets/img/job_archive_photos/scoreboard (50).jpg",
         "category": "Scoreboard"
@@ -295,6 +296,11 @@
         "category": "Scoreboard"
     },
     {
+        "filter": "filter-score",
+        "img": "assets/img/job_archive_photos/scoreboard (161).jpg",
+        "category": "Scoreboard"
+    },
+    {
         "filter": "filter-msg",
         "img": "assets/img/job_archive_photos/MCenter_1.jpg",
         "category": "Message Center"
@@ -347,6 +353,11 @@
     {
         "filter": "filter-msg",
         "img": "assets/img/job_archive_photos/MCenter_11.jpg",
+        "category": "Message Center"
+    },
+    {
+        "filter": "filter-msg",
+        "img": "assets/img/job_archive_photos/MCenter_12.jpg",
         "category": "Message Center"
     },
     {
@@ -410,26 +421,6 @@
         "category": "Shot Clock"
     },
     {
-        "filter": "filter-other",
-        "img": "assets/img/job_archive_photos/SClock_4.jpg",
-        "category": "Shot Clock"
-    },
-    {
-        "filter": "filter-other",
-        "img": "assets/img/job_archive_photos/SClock_5.jpg",
-        "category": "Shot Clock"
-    },
-    {
-        "filter": "filter-other",
-        "img": "assets/img/job_archive_photos/SClock_6.jpg",
-        "category": "Shot Clock"
-    },
-    {
-        "filter": "filter-other",
-        "img": "assets/img/job_archive_photos/SClock_7.jpg",
-        "category": "Shot Clock"
-    },
-    {
         "filter": "filter-video",
         "img": "assets/img/job_archive_photos/videoboard (1).jpg",
         "category": "Videoboard"
@@ -455,14 +446,39 @@
         "category": "Videoboard"
     },
     {
-        "filter": "filter-other",
-        "img": "assets/img/job_archive_photos/Sound_1.jpg",
-        "category": "Sound System"
+        "filter": "filter-video",
+        "img": "assets/img/job_archive_photos/videoboard (5).jpg",
+        "category": "Videoboard"
     },
     {
-        "filter": "filter-structure",
-        "img": "assets/img/job_archive_photos/structure (1).jpg",
-        "category": "New Structure"
+        "filter": "filter-video",
+        "img": "assets/img/job_archive_photos/videoboard (6).jpg",
+        "category": "Videoboard"
+    },
+    {
+        "filter": "filter-video",
+        "img": "assets/img/job_archive_photos/videoboard (7).jpg",
+        "category": "Videoboard"
+    },
+    {
+        "filter": "filter-video",
+        "img": "assets/img/job_archive_photos/videoboard (8).jpg",
+        "category": "Videoboard"
+    },
+    {
+        "filter": "filter-video",
+        "img": "assets/img/job_archive_photos/videoboard (9).jpeg",
+        "category": "Videoboard"
+    },
+    {
+        "filter": "filter-video",
+        "img": "assets/img/job_archive_photos/videoboard (10).jpg",
+        "category": "Videoboard"
+    },
+    {
+        "filter": "filter-video",
+        "img": "assets/img/job_archive_photos/videoboard (11).jpg",
+        "category": "Videoboard"
     },
     {
         "filter": "filter-structure",
@@ -476,27 +492,12 @@
     },
     {
         "filter": "filter-structure",
-        "img": "assets/img/job_archive_photos/structure (5).jpg",
-        "category": "New Structure"
-    },
-    {
-        "filter": "filter-structure",
         "img": "assets/img/job_archive_photos/structure (6).jpg",
         "category": "New Structure"
     },
     {
         "filter": "filter-structure",
         "img": "assets/img/job_archive_photos/structure (7).jpg",
-        "category": "New Structure"
-    },
-    {
-        "filter": "filter-structure",
-        "img": "assets/img/job_archive_photos/structure (8).jpg",
-        "category": "New Structure"
-    },
-    {
-        "filter": "filter-structure",
-        "img": "assets/img/job_archive_photos/structure (9).jpg",
         "category": "New Structure"
     },
     {
@@ -522,11 +523,6 @@
     {
         "filter": "filter-structure",
         "img": "assets/img/job_archive_photos/structure (14).jpg",
-        "category": "New Structure"
-    },
-    {
-        "filter": "filter-structure",
-        "img": "assets/img/job_archive_photos/structure (15).jpg",
         "category": "New Structure"
     },
     {
@@ -597,6 +593,11 @@
     {
         "filter": "filter-structure",
         "img": "assets/img/job_archive_photos/structure (31).jpg",
+        "category": "New Structure"
+    },
+    {
+        "filter": "filter-structure",
+        "img": "assets/img/job_archive_photos/structure (32).jpg",
         "category": "New Structure"
     }
 ]

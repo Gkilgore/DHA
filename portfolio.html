@@ -150,22 +150,25 @@
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
-          data-portfolio-sort="original-order">
+          data-portfolio-sort="original-order" id="vue_app">
 
           <ul class="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-score">Scoreboards</li>
-            <li data-filter=".filter-video">Videoboards</li>
-            <li data-filter=".filter-msg">Message Centers</li>
-            <li data-filter=".filter-structure">New Structure</li>
-            <li data-filter=".filter-other">Other</li>
-
-
+            <li data-filter="*" :class="{ 'filter-active': activeFilter === '*' }" @click="setFilter('*')">All</li>
+            <li data-filter=".filter-score" :class="{ 'filter-active': activeFilter === '.filter-score' }"
+              @click="setFilter('.filter-score')">Scoreboards</li>
+            <li data-filter=".filter-video" :class="{ 'filter-active': activeFilter === '.filter-video' }"
+              @click="setFilter('.filter-video')">Videoboards</li>
+            <li data-filter=".filter-msg" :class="{ 'filter-active': activeFilter === '.filter-msg' }"
+              @click="setFilter('.filter-msg')">Message Centers</li>
+            <li data-filter=".filter-structure" :class="{ 'filter-active': activeFilter === '.filter-structure' }"
+              @click="setFilter('.filter-structure')">New Structure</li>
+            <li data-filter=".filter-other" :class="{ 'filter-active': activeFilter === '.filter-other' }"
+              @click="setFilter('.filter-other')">Other</li>
           </ul><!-- End Portfolio Filters -->
 
-          <div class="row g-0 portfolio-container" id="vue_app">
-            <!-- SCOREBOARD JOB-->
-            <div v-for="(job, index) in jobs" :key="index"
+          <div class="row g-0 portfolio-container">
+            <!-- JOB ITEM -->
+            <div v-for="(job, index) in paginatedJobs" :key="index"
               :class="['col-xl-3', 'col-lg-4', 'col-md-6', 'portfolio-item', job.filter]">
               <img v-if="job.img" :src="job.img" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -175,23 +178,28 @@
                 <p class="text-white pt-3"><strong>Project Type:</strong> {{ job.category }}</p>
               </div>
             </div>
-            <!-- End Job -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
+          </div>
+          <!-- End Job -->
+          <div class="row mt-2">
+            <div class="col-12">
+              <!-- Pagination Controls -->
+              <nav aria-label="Job pagination">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item" :class="{ disabled: currentPage === 1 }">
+                    <a class="page-link" href="#" @click.prevent="changePage(currentPage - 1)">Previous</a>
+                  </li>
+                  <li class="page-item" v-for="page in totalPages" :key="page"
+                    :class="{ active: currentPage === page }">
+                    <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
+                  </li>
+                  <li class="page-item" :class="{ disabled: currentPage === totalPages }">
+                    <a class="page-link" href="#" @click.prevent="changePage(currentPage + 1)">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div><!-- End Portfolio Container -->
 
       </div>
     </section><!-- End Portfolio Section -->
@@ -227,25 +235,26 @@
             </div>
 
             <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Scoreboards.html">Scoreboards</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Videoboards.html">Videoboards</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="Service-details_MsgCenters.html">Message Centers</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Lights.html">Stadium Lights</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>More Services</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Service.html">Troubleshooting &
-                  Repair</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="Service-details_NewStructures.html">New Structures</a>
-              </li>
-              <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Other.html">EOP, Clock, Sound and Other
-                  Installs</a></li>
-            </ul>
-          </div>
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Scoreboards.html">Scoreboards</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Videoboards.html">Videoboards</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="Service-details_MsgCenters.html">Message Centers</a>
+                </li>
+                <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Lights.html">Stadium Lights</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>More Services</h4>
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Service.html">Troubleshooting &
+                    Repair</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="Service-details_NewStructures.html">New Structures</a>
+                </li>
+                <li><i class="bi bi-chevron-right"></i> <a href="Service-details_Other.html">EOP, Clock, Sound and Other
+                    Installs</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
