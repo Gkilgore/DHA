@@ -65,7 +65,7 @@
 
       <a href="index.html#" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <img src="assets/img/logo.png" alt="DHA Contracting logo"> -->
         <h1>DHA<span>.</span></h1>
       </a>
 
@@ -170,7 +170,8 @@
             <!-- JOB ITEM -->
             <div v-for="(job, index) in paginatedJobs" :key="index"
               :class="['col-xl-3', 'col-lg-4', 'col-md-6', 'portfolio-item', job.filter]">
-              <img v-if="job.img" :src="job.img" class="img-fluid" alt="">
+              <img v-if="job.img" :src="job.img" class="img-fluid"
+                :alt="`${job.category} project photo ${index + 1}`">
               <div class="portfolio-info">
                 <a :href="job.img" data-gallery="portfolio-gallery" class="glightbox preview-link">
                   <i class="bi bi-zoom-in"></i>
