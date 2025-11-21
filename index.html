@@ -413,6 +413,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="col-lg-8">
 
             <form action="contact.php" method="post" role="form" class="php-email-form">
+              <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off"
+                aria-hidden="true">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -581,6 +583,25 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
+
+  <script>
+    (function () {
+      const recaptchaSiteKey = 'REPLACE_WITH_RECAPTCHA_SITE_KEY';
+      const form = document.querySelector('.php-email-form');
+
+      if (form && recaptchaSiteKey && recaptchaSiteKey !== 'REPLACE_WITH_RECAPTCHA_SITE_KEY') {
+        form.setAttribute('data-recaptcha-site-key', recaptchaSiteKey);
+
+        const recaptchaScript = document.createElement('script');
+        recaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(recaptchaSiteKey);
+        recaptchaScript.async = true;
+        recaptchaScript.defer = true;
+        document.head.appendChild(recaptchaScript);
+      } else if (form) {
+        form.removeAttribute('data-recaptcha-site-key');
+      }
+    })();
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
