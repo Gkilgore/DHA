@@ -13,8 +13,8 @@ This schedule breaks the SEO recommendations into staged pull requests to reduce
 - Basic QA: test with Google Rich Results/Schema validators.
 
 ## PR 3: Sitemap Automation
-- Regenerate `sitemap.xml` with current `lastmod` values and add automation (build/deploy hook or cron).
-- Submit updated sitemap path documentation for Search Console.
+- Regenerate `sitemap.xml` with current `lastmod` values and add automation (build/deploy hook or cron). Use `python scripts/generate_sitemap.py` in the deploy step or via a weekly cron so timestamps stay fresh.
+- Submit updated sitemap path documentation for Search Console. Use `https://www.dhacontracting.com/sitemap.xml` when resubmitting the sitemap in GSC.
 - Basic QA: check sitemap validity and freshness.
 
 ## PR 4: On-Page Content and Accessibility
