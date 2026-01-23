@@ -26,6 +26,34 @@
 - Add post-deploy verification checklist (Search Console coverage, Core Web Vitals, crawl errors).
 - Define rollback steps for significant issues detected after deployment.
 
+#### Uptime/Error Monitoring Setup
+To monitor site uptime and errors:
+1. Sign up for UptimeRobot (free tier available).
+2. Add a monitor for https://www.dhacontracting.com with keyword monitoring (e.g., check for "DHA Contracting" in response).
+3. Set up email/SMS alerts for downtime.
+4. For error monitoring, integrate Google Analytics or Search Console alerts for 5xx errors.
+
+#### Post-Deploy Verification Checklist
+After each deployment:
+- [ ] Run automated check: `python scripts/post_deploy_check.py`
+- [ ] Check site loads in browser (desktop and mobile).
+- [ ] Verify sitemap.xml is updated and accessible.
+- [ ] Run Google Search Console: Check for crawl errors, index coverage.
+- [ ] Check Core Web Vitals in PageSpeed Insights or Search Console.
+- [ ] Test contact form submission.
+- [ ] Verify all portfolio and service pages load correctly.
+- [ ] Check for broken links using a tool like Screaming Frog or manually.
+
+#### Rollback Steps
+If issues are detected post-deployment:
+1. Identify the issue (e.g., via monitoring alerts or user reports).
+2. If critical (site down, major functionality broken):
+   - Revert the last commit: `git revert HEAD`
+   - Push the revert: `git push origin master`
+   - Clear any caches (CDN, server cache).
+3. For non-critical issues, fix and redeploy.
+4. Notify stakeholders and monitor for resolution.
+
 ## Future Enhancements
 - Add Google Ads conversion tracking for better marketing ROI measurement.
 - Implement a blog section for SEO and content marketing (e.g., project updates, industry tips).
