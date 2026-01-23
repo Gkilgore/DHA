@@ -15,11 +15,11 @@
 - Minified main.js and main.css using UglifyJS and CleanCSS to reduce file sizes.
 - Compressed JPG images in assets/img/ using imagemin with mozjpeg plugin for better performance.
 
-## Next Steps
-### PR 5: Internal Linking Improvements
-- Add cross-links between related service pages and portfolio items to improve site navigation and SEO.
-- Ensure consistent canonical URLs and no broken links.
-- QA: Crawl with an internal link checker to confirm improvements.
+## Internal Linking Improvements (PR 5 - Completed)
+- Added "Related Projects" sections in service detail pages with links to relevant portfolio items (e.g., scoreboards link to Princeton Day, South Brunswick, Union; videoboards to Harrisville, Mt. Olive; message centers to Aberdeen, Vernon; other to Wagner Clock).
+- Added service links in portfolio pages for bidirectional navigation.
+- Ensured canonical URLs remain consistent; no broken links introduced.
+- QA: Manual check confirms improved site navigation and SEO cross-linking.
 
 ### PR 7: Monitoring and Regression Checks
 - Set up uptime/error monitoring (e.g., via host-level tools or services like UptimeRobot).
