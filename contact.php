@@ -79,12 +79,6 @@ $contact->add_message($message, 'Message', 10);
 // Honeypot for basic bot detection
 $contact->honeypot = trim($_POST['website'] ?? '');
 
-// Google reCAPTCHA v3 (configure via environment variable)
-$recaptcha_secret_key = getenv('RECAPTCHA_SECRET_KEY');
-if ($recaptcha_secret_key) {
-  $contact->recaptcha_secret_key = $recaptcha_secret_key;
-}
-
 // Consistent CC/BCC handling
 $default_cc = array('kilgore@dhacontracting.com');
 $env_cc = getenv('CONTACT_FORM_CC');
