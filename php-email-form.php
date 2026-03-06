@@ -89,7 +89,7 @@ class PHP_Email_Form {
 
     if( $this->recaptcha_secret_key ) {
 
-      if(! $_POST['recaptcha-response']) {
+      if(! $_POST['g-recaptcha-response']) {
         return 'No reCaptcha response provided!';
       }
 
@@ -99,7 +99,7 @@ class PHP_Email_Form {
           'method'  => 'POST',
           'content' => http_build_query([
             'secret' => $this->recaptcha_secret_key,
-            'response' => $_POST['recaptcha-response']
+            'response' => $_POST['g-recaptcha-response']
           ])
         ]
       ];
@@ -110,6 +110,11 @@ class PHP_Email_Form {
 
       if( ! $recapthca_response_keys['success'] ) {
         return 'Failed to validate the reCaptcha!';
+      }
+
+      // For reCAPTCHA v3, check the score (v2 doesn't have score)
+      if( isset($recapthca_response_keys['score']) && $recapthca_response_keys['score'] < 0.5 ) {
+        return 'reCAPTCHA verification failed. Please try again.';
       }
     }
 

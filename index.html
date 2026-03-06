@@ -120,6 +120,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     }
   </script>
 
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfSB4IsAAAAANjyP4F6NSsGUaJeodhnDyhCPdPL"></script>
+
 </head>
 
 
@@ -436,9 +439,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
           <div class="col-lg-8">
 
-            <form action="contact.php" method="post" role="form" class="php-email-form">
+            <form action="contact.php" method="post" role="form" class="php-email-form" id="contact-form">
               <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off"
                 aria-hidden="true">
+              <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -480,7 +484,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <div class="sent-message">Thank you for reaching out, Someone will be in contact with you ASAP about
                   your email.</div>
               </div>
-              <div class="text-center"><button type="submit" onclick="gtag_report_conversion()">Send Message</button>
+              <div class="text-center"><button type="submit">Send Message</button>
               </div>
             </form>
 
@@ -618,6 +622,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js" defer></script>
+
+  <!-- reCAPTCHA v3 Form Handler -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LfSB4IsAAAAANjyP4F6NSsGUaJeodhnDyhCPdPL', {action: 'submit'}).then(function(token) {
+          document.getElementById('g-recaptcha-response').value = token;
+          document.getElementById('contact-form').submit();
+        });
+      });
+    });
+  </script>
 
 </body>
 

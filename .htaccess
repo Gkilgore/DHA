@@ -1,0 +1,6 @@
+# Set reCAPTCHA secret key
+SetEnv RECAPTCHA_SECRET_KEY "6LfSB4IsAAAAAADpVpcTeF60PycoL2rJhigKrYhb"
+
+# Other potential configurations
+# php_value upload_max_filesize 10M
+# php_value post_max_size 10M
