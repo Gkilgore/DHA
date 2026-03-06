@@ -26,9 +26,57 @@
 - Add post-deploy verification checklist (Search Console coverage, Core Web Vitals, crawl errors).
 - Define rollback steps for significant issues detected after deployment.
 
-## Future Enhancements
-- Add Google Ads conversion tracking for better marketing ROI measurement.
-- Implement a blog section for SEO and content marketing (e.g., project updates, industry tips).
-- Enhance mobile responsiveness and accessibility (e.g., add ARIA labels, improve keyboard navigation).
-- Integrate advanced analytics (e.g., heatmaps, A/B testing for CTAs).
-- Consider adding testimonials or case studies to boost trust and conversions.
+## PR 9: Google Ads Conversion Tracking Implementation
+- Add Google Ads conversion tracking code for lead generation (contact form submissions)
+- Implement event tracking for key user interactions (service page visits, portfolio views)
+- Set up conversion goals in Google Ads for better ROI measurement
+- Add Facebook Pixel for cross-platform tracking
+- Basic QA: Test conversion tracking in Google Ads and Analytics
+
+## PR 10: Mobile Responsiveness & Accessibility Enhancements
+- Audit and improve mobile responsiveness across all pages
+- Add ARIA labels and improve keyboard navigation
+- Ensure proper heading hierarchy (H1-H6) for screen readers
+- Optimize touch targets for mobile devices
+- Add skip links for accessibility
+- Basic QA: Test with Lighthouse accessibility audit and mobile devices
+
+## PR 11: Advanced Analytics Integration
+- Implement Google Analytics 4 with enhanced e-commerce tracking
+- Add heatmaps and session recordings (Hotjar or similar)
+- Set up A/B testing framework for CTAs and landing pages
+- Integrate with Google Search Console for better insights
+- Basic QA: Verify tracking codes and data collection
+
+## PR 12: Testimonials & Social Proof Enhancement
+- Add customer testimonials section to home page
+- Create case study pages with before/after photos
+- Integrate review widgets from Google/MyBusiness
+- Add trust badges and certifications
+- Basic QA: Collect and validate testimonial content
+
+## PR 13: Performance Optimization Round 2
+- Implement critical CSS loading
+- Add WebP image format support with fallbacks
+- Optimize font loading (font-display: swap)
+- Implement service worker for caching
+- Basic QA: Run performance audits and compare scores
+
+## Future Considerations
+- Multi-language support for broader reach
+- Video content integration (project timelapses, tutorials)
+- E-commerce functionality for equipment sales
+- Integration with project management tools
+- Advanced SEO (schema markup expansion, local SEO)
+
+## PR 8: Blog Section Implementation (Completed)
+- Created blog.html as the main blog listing page with sidebar navigation.
+- Added "Blog" link to main navigation across all pages.
+- Created three initial blog posts:
+  - "Advancements in Scoreboard Technology: What Schools Need to Know"
+  - "Essential Maintenance Tips for LED Videoboards"
+  - "Case Study: Mount St. Mary Academy Scoreboard Upgrade"
+- Implemented proper SEO meta tags, structured data, and canonical URLs for all blog pages.
+- Added blog directory structure for organized content management.
+- Updated footer links to include blog navigation.
+- Regenerated sitemap.xml to include new blog pages for search engine indexing.
