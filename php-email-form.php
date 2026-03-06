@@ -89,7 +89,7 @@ class PHP_Email_Form {
 
     if( $this->recaptcha_secret_key ) {
 
-      if(! $_POST['recaptcha-response']) {
+      if(! $_POST['g-recaptcha-response']) {
         return 'No reCaptcha response provided!';
       }
 
@@ -99,7 +99,7 @@ class PHP_Email_Form {
           'method'  => 'POST',
           'content' => http_build_query([
             'secret' => $this->recaptcha_secret_key,
-            'response' => $_POST['recaptcha-response']
+            'response' => $_POST['g-recaptcha-response']
           ])
         ]
       ];
